@@ -1,0 +1,29 @@
+/* Founder and Notice Container */
+.founder-notice-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Ensures both sections stretch to the same height */
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 80%; /* Restrict width for better alignment */
+  gap: 20px;
+}
+
+/* Shared Styling for Both Sections */
+.founder-message-section,
+.notice-section {
+  flex: 1;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+
+.slideshow-section {
+  margin-bottom: 50px; 
+}

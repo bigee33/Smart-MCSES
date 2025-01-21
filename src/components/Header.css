@@ -1,0 +1,63 @@
+/* Importing Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+/* Header styles */
+.header {
+  background-color: #f8f9fa;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  border-bottom: 3px solid #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and school name container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  object-fit: contain;
+}
+
+.school-name {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.school-name:hover {
+  color: #4e1d9f;
+  transform: scale(1.05);
+}
+
+/* Navigation menu */
+.menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #4e1d9f;
+  text-decoration: underline;
+}

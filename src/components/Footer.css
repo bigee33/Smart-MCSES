@@ -1,0 +1,25 @@
+/* Footer styles */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    border-top: 1px solid #ddd;
+  }
+  
+  body, html {
+    height: 100%;  
+    margin: 0;     
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    flex: 1;  
+  }
+  
+  footer {
+    margin-top: auto;  
+  }
+  
