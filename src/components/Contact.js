@@ -5,12 +5,12 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <h1>Contact Us</h1>
-      /* Main Box for Contact Details */
       <div className="card">
         <h3>Our Address</h3>
         <p>Melamchi Community School</p>
         <p>Melamchi-11, Sindhupalchowk</p>
       </div>
+
       <div className="card">
         <h3>Get in Touch</h3>
         <p>
@@ -20,12 +20,13 @@ const Contact = () => {
           <strong>Email:</strong> melamchicommunityschool@gmail.com
         </p>
       </div>
+
       <div className="card">
         <h3>Office Hours</h3>
         <p>Sunday - Friday: 9:00 AM - 4:00 PM</p>
         <p>Saturday : Closed !</p>
       </div>
-      /* Google Maps Embed */
+
       <div className="card">
         <h3>Find Us on the Map</h3>
         <iframe
@@ -38,7 +39,7 @@ const Contact = () => {
           title="School Location"
         ></iframe>
       </div>
-      /* Social Media Links */
+
       <div className="card">
         <h3>Follow Us</h3>
         <p>
@@ -49,10 +50,9 @@ const Contact = () => {
           >
             Facebook
           </a>{" "}
-          |{" "}
         </p>
       </div>
-      /* Contact Form */
+
       <div className="card">
         <h3>Contact Form</h3>
         <form>
