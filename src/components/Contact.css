@@ -1,0 +1,130 @@
+/* Contact Page Styles */
+.contact-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center all text within this container */
+  }
+  
+  /* Centering the Title */
+  h1 {
+    color: #be37a1;
+    margin-bottom: 20px;
+  }
+  
+  /* Centering the Subheadings */
+  h2 {
+    color: #2980b9;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: #be37a1;
+    margin-bottom: 15px;
+  }
+  
+  /* General Paragraph Styles */
+  p {
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Card-like Section Styles (For Boxes) */
+  .card {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Contact Form Styling */
+  form {
+    margin-top: 20px;
+    text-align: center; /* Center form contents */
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    font-size: 16px;
+    display: block; /* Ensures label takes full width */
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    max-width: 500px; /* Ensure inputs don't stretch too far */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 4px rgba(52, 152, 219, 0.4);
+  }
+  
+  button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Add space between the button and form */
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Social Media Links Styling */
+  p a {
+    margin-right: 10px;
+    display: inline-block;
+  }
+  
+  p a:hover {
+    color: #2980b9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 15px;
+    }
+  
+    iframe {
+      height: 250px;
+    }
+  
+    input, textarea {
+      max-width: 100%; /* Adjust input width on small screens */
+    }
+  }
+  
