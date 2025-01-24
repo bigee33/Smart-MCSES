@@ -1,10 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'; 
 import './Header.css';
 
 const Header = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollPos, setLastScrollPos] = useState(0);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+
+    if (currentScrollPos > lastScrollPos && currentScrollPos > 100) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true); 
+    }
+
+    setLastScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollPos]);
+
   return (
-    <header className="header">
+    <header className={`header ${isVisible ? 'visible' : 'hidden'}`}>
+      <div className="top-bar">
+        <div className="contact-info">
+          <span><FaPhoneAlt className="icon" /> 011-401105</span>
+          <span><FaWhatsapp className="icon whatsapp-icon" /> 980000000000</span>
+        </div>
+      </div>
       <div className="logo-container">
         <div className="logo">
           <img
@@ -14,13 +44,12 @@ const Header = () => {
         </div>
         <div className="school-name">Welcome to Smart MCSES</div>
       </div>
-
       <nav className="menu">
-      <Link to="/">Home</Link>
-        <Link to="/about-us">About Us</Link>
-        <Link to="/notice">Notice</Link>
-        <Link to="/fee-structure">Fee Structure</Link>
-        <Link to="/galleries">Galleries</Link>
+        <Link to="/">Home</Link>
+        <Link to="/AboutUs">About Us</Link>
+        <Link to="/Notices">Notice</Link>
+        <Link to="/Feestructure">Fee Structure</Link>
+        <Link to="/Gallery">Galleries</Link>
         <Link to="/contact">Contact</Link>
       </nav>
     </header>

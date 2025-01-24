@@ -8,6 +8,7 @@ import Notices from './components/Notices';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import FounderMessage from './components/FounderMessage'; 
+import FeeStructure from './components/FeeStructure'; 
 
 const App = () => {
   return (
@@ -17,11 +18,12 @@ const App = () => {
         <div className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutUs />} />
-            <Route path="/notices" element={<Notices />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/founder-message" element={<FounderMessage />} />
+            <Route path="/AboutUs" element={<AboutUs />} />
+            <Route path="/Notices" element={<Notices />} />
+            <Route path="/FeeStructure" element={<FeeStructure />} /> 
+            <Route path="/Gallery" element={<Gallery />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/FounderMessage" element={<FounderMessage />} />
           </Routes>
         </div>
         <Footer />

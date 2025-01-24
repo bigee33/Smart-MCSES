@@ -1,25 +1,83 @@
-/* Footer styles */
+/* Footer.css */
 .footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #333;
-    border-top: 1px solid #ddd;
-  }
-  
-  body, html {
-    height: 100%;  
-    margin: 0;     
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .main-content {
-    flex: 1;  
-  }
-  
-  footer {
-    margin-top: auto;  
-  }
-  
+  background: linear-gradient(to right, #be37a1, #2980b9);
+  color: #fff; /* White text */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Quick Contact Section */
+.quick-contact h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+}
+
+.quick-contact p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.quick-contact a {
+  color: white; /* Gold color for email link */
+  text-decoration: none;
+}
+
+.quick-contact i {
+  margin-right: 8px;
+}
+
+/* Social Media Section */
+.social-icons h3 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #FFD700; /* Gold color on hover */
+}
+
+/* Line Separator */
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background: #fff;
+  margin: 20px 0;
+  width: 100%;
+}
+
+/* Copyright Section */
+.copyright {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.copyright-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.developed-by {
+  font-size: 14px;
+  font-style: Bold;
+  color: #FFD700; /* Gold text */
+}
