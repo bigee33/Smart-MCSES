@@ -1,5 +1,5 @@
 /* Import a signature-like font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 
 /* Home Page */
 .home-page {
@@ -57,7 +57,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, #6a4e97, #7a9fdb); /* Soft purple to blue gradient */
+  background: linear-gradient(
+    135deg,
+    #6a4e97,
+    #7a9fdb
+  ); /* Soft purple to blue gradient */
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   padding: 40px;
@@ -76,12 +80,12 @@
 .founder-photo {
   flex: 0 0 220px;
   height: 220px;
-  width: 220px; 
-  border-radius: 50%; 
+  width: 220px;
+  border-radius: 50%;
   overflow: hidden;
-  margin-left: -60px; 
+  margin-left: -60px;
   border: 5px solid white;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .founder-image {
@@ -92,17 +96,17 @@
 }
 
 .founder-photo:hover .founder-image {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .founder-message-content {
   flex: 1;
-  color: #ffffff; 
-  text-align: center; 
+  color: #ffffff;
+  text-align: center;
 }
 
 .founder-message-content h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -113,7 +117,7 @@
   font-size: 20px;
   line-height: 1.6;
   margin-bottom: 30px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .founder-name p {
@@ -122,13 +126,13 @@
   color: #ffffff;
   font-weight: bold;
   margin-top: 10px;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   letter-spacing: 1px;
 }
 
 /* Notice Section */
 .notice-container {
-  background: linear-gradient(135deg, #6a4e97, #7a9fdb); 
+  background: linear-gradient(135deg, #6a4e97, #7a9fdb);
   padding: 35px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -143,7 +147,7 @@
 }
 
 .notice-container h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -159,8 +163,8 @@
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 18px;
-  font-family: 'Open Sans', sans-serif;
-  color: #e0e0e0;
+  font-family: "Open Sans", sans-serif;
+  color: #2980b9;
   padding: 12px;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -196,7 +200,7 @@
 }
 
 .upcoming-events-container h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -212,8 +216,8 @@
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 18px;
-  font-family: 'Open Sans', sans-serif;
-  color: #e0e0e0;
+  font-family: "Open Sans", sans-serif;
+  color: #2980b9;
   padding: 12px;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -262,7 +266,7 @@
 }
 
 .statistics-container h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 30px;
@@ -290,7 +294,7 @@
 }
 
 .stat-card h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: bold;
   margin-top: 15px;
@@ -298,7 +302,7 @@
 
 .stat-card p {
   font-size: 40px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 15px 0;
   line-height: 1.2;
 }

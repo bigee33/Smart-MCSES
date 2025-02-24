@@ -5,10 +5,9 @@ import "./Home.css";
 // Slideshow component
 const Slideshow = () => {
   const images = [
-    "https://scontent.fktm3-1.fna.fbcdn.net/v/t1.6435-9/93841200_153776369503769_5435202622560665600_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=VG50Z77ca7oQ7kNvgGYUtIM&_nc_oc=AdiBvianirAASVzB8t6tfIIwD2ZdLGpVAKRKymsXYIAL2OSbMIj-5swkcBawzFRnxzVeZdxO8Xzdo3GypGtqpP5p&_nc_zt=23&_nc_ht=scontent.fktm3-1.fna&_nc_gid=AXIn_U6SvFyHYDUwyGeXqMt&oh=00_AYAYJJtOohzFzNtaTh3hmwpsDW9pEcKYD0gIJkhfxeYF-w&oe=67BB17BD",
-    "https://scontent.fktm3-1.fna.fbcdn.net/v/t1.6435-9/84989069_124018602479546_2886237638027640832_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=4q7O5KiA4NYQ7kNvgHwvZ4W&_nc_oc=AdhLJPNJ8_edun8qP3vz6IuB4jCXTJOuA3jdzUnK8G5lTEiTaS_rWLssydwr2te7UgmpckSOiluXUARjN01q7IYA&_nc_zt=23&_nc_ht=scontent.fktm3-1.fna&_nc_gid=AcbzRqCd-lopblxNYXnCo-C&oh=00_AYDvtVYtECzabASMyS6bPltSaG7sAS-VfE65Lx0hb2KMvg&oe=67BB44F6",
-    "https://scontent.fktm3-1.fna.fbcdn.net/v/t1.6435-9/93841200_153776369503769_5435202622560665600_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=VG50Z77ca7oQ7kNvgGYUtIM&_nc_oc=AdiBvianirAASVzB8t6tfIIwD2ZdLGpVAKRKymsXYIAL2OSbMIj-5swkcBawzFRnxzVeZdxO8Xzdo3GypGtqpP5p&_nc_zt=23&_nc_ht=scontent.fktm3-1.fna&_nc_gid=AXIn_U6SvFyHYDUwyGeXqMt&oh=00_AYAYJJtOohzFzNtaTh3hmwpsDW9pEcKYD0gIJkhfxeYF-w&oe=67BB17BD",
-    "https://scontent.fktm3-1.fna.fbcdn.net/v/t1.6435-9/84989069_124018602479546_2886237638027640832_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=4q7O5KiA4NYQ7kNvgHwvZ4W&_nc_oc=AdhLJPNJ8_edun8qP3vz6IuB4jCXTJOuA3jdzUnK8G5lTEiTaS_rWLssydwr2te7UgmpckSOiluXUARjN01q7IYA&_nc_zt=23&_nc_ht=scontent.fktm3-1.fna&_nc_gid=AcbzRqCd-lopblxNYXnCo-C&oh=00_AYDvtVYtECzabASMyS6bPltSaG7sAS-VfE65Lx0hb2KMvg&oe=67BB44F6",
+    "/images/Slide1.jpg",
+    "/images/Slide2.jpg",
+    "/images/Slide3.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,7 +47,7 @@ const FounderMessage = () => {
     <div className="founder-message-container">
       <div className="founder-photo">
         <img
-          src="https://scontent.fktm3-1.fna.fbcdn.net/v/t1.6435-9/93802843_153776319503774_5470402795834179584_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bh_AjNO_L8UQ7kNvgHo8TEq&_nc_oc=AdhGWL0T9J06LjFuo3IMvf_DxxyagFX49CUgjHbYtWXcw__IQvM7ezo3F1sW2vfjt55hbHJyVPIooo62AvIMfgKI&_nc_zt=23&_nc_ht=scontent.fktm3-1.fna&_nc_gid=Aq_UnM4hzm9tfKtkJFgOm-q&oh=00_AYAh5TgMNXfBg0uDyIZcHgztvnIYldo-7k-nBNBXjcRiGg&oe=67BB41F9"
+          src="/images/Founder1.jpg"
           alt="Founder"
           className="founder-image"
         />
@@ -73,7 +72,7 @@ const FounderMessage = () => {
           impact on their future.
         </p>
         <div className="founder-name">
-          <p className="founder-title">Founder:</p>
+          <p className="founder-title">Founding Principal:</p>
           <p className="founder-name-text">Dinesh Basnet</p>
         </div>
       </div>
@@ -136,7 +135,6 @@ const Statistics = () => {
     </div>
   );
 };
-
 
 const Home = () => {
   return (

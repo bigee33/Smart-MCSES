@@ -45,6 +45,7 @@ const AdminLogin = () => {
         />
         <button type="submit">Login</button>
       </form>
+      <br></br>
     </div>
   );
 };
