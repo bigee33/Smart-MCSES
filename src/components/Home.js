@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { FaUsers, FaChalkboardTeacher, FaUserTie } from "react-icons/fa"; // Importing icons for stats
+import React, { useState, useEffect } from "react";
+import { FaUsers, FaChalkboardTeacher, FaUserTie } from "react-icons/fa";
 import "./Home.css";
 
 // Slideshow component
@@ -11,6 +11,13 @@ const Slideshow = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -41,7 +48,7 @@ const Slideshow = () => {
   );
 };
 
-// FounderMessage component
+// Founder Message
 const FounderMessage = () => {
   return (
     <div className="founder-message-container">
@@ -59,17 +66,13 @@ const FounderMessage = () => {
           this incredible journey with you. At SMCSES, our mission is to provide
           an environment where students are not only equipped with academic
           knowledge but also encouraged to develop creativity, leadership, and
-          strong moral character. Education, for us, is about more than just
-          books—it's about nurturing each children's unique talents and
-          potential. Our dedicated team of educators works passionately to
-          ensure that every student feels supported and empowered to pursue
-          their dreams. We also emphasize values such as integrity, compassion,
-          and respect, which guide all aspects of our school culture. Together,
-          with the support of our parents and community, we aim to shape
-          responsible and compassionate leaders of tomorrow. Thank you for
-          entrusting us with the privilege of being a part of your child's
-          educational journey. We are committed to making a positive and lasting
-          impact on their future.
+          strong moral character.
+        </p>
+        <p>
+          Our dedicated team of educators works passionately to ensure that
+          every student feels supported and empowered to pursue their dreams.
+          Together, with the support of our parents and community, we aim to
+          shape responsible and compassionate leaders of tomorrow.
         </p>
         <div className="founder-name">
           <p className="founder-title">Founding Principal:</p>
@@ -80,37 +83,37 @@ const FounderMessage = () => {
   );
 };
 
-// Notice component
+// Notices
 const Notice = () => {
   return (
     <div className="notice-container">
       <h2>Notices</h2>
       <ul>
-        <li>Notice 1: Exam schedule has been updated.</li>
-        <li>Notice 2: New batch registration starts next week.</li>
-        <li>Notice 3: Library hours have been extended.</li>
+        <li>📌 Exam schedule has been updated.</li>
+        <li>📌 New batch registration starts next week.</li>
+        <li>📌 Library hours have been extended.</li>
       </ul>
     </div>
   );
 };
 
-// Upcoming Events component
+// Events
 const UpcomingEvents = () => {
   return (
     <div className="upcoming-events-container">
       <h2>Upcoming Events</h2>
       <ul>
-        <li>Event 1 - Date</li>
-        <li>Event 2 - Date</li>
-        <li>Event 3 - Date</li>
-        <li>Event 4 - Date</li>
-        <li>Event 5 - Date</li>
+        <li>📅 Parent-Teacher Meeting - April 25</li>
+        <li>📅 Science Exhibition - May 3</li>
+        <li>📅 Annual Sports Day - May 12</li>
+        <li>📅 Art Competition - May 20</li>
+        <li>📅 Summer Break - From June 1</li>
       </ul>
     </div>
   );
 };
 
-// Statistics component
+// Stats
 const Statistics = () => {
   return (
     <div className="statistics-container">
@@ -136,17 +139,17 @@ const Statistics = () => {
   );
 };
 
+// Main Home Page
 const Home = () => {
   return (
     <div className="home-page">
-      {/* Slideshow Section */}
       <Slideshow />
 
-      {/* Founder Message, Notice, and Upcoming Events Section */}
       <div className="founder-notice-container">
         <div className="founder-message-section">
           <FounderMessage />
         </div>
+
         <div className="notice-events-section">
           <div className="notice-section">
             <Notice />
@@ -157,7 +160,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Statistics Section */}
       <Statistics />
     </div>
   );

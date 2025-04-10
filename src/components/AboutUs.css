@@ -1,121 +1,185 @@
+/* General styling */
 .about-us {
-    font-family: 'Arial', sans-serif;
-    color: #2980b9;
-    line-height: 1.6;
-    margin: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #2980b9;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Header styling */
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  color: #be37a1;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: #2980b9;
+}
+
+/* Info widget section */
+.about-widgets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.widget {
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 45%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.widget:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.widget h2 {
+  font-size: 1.8rem;
+  color: #be37a1;
+  margin-bottom: 15px;
+}
+
+.widget p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Team section */
+.about-team {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.about-team h2 {
+  font-size: 1.8rem;
+  color: #be37a1;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.about-team h2:hover {
+  color: #8e2785;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 90%;
+  position: relative;
+  z-index: 10000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #be37a1;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Team Member Layout */
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.team-member {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #be37a1;
+}
+
+.team-member h3 {
+  font-size: 1.1rem;
+  color: #2980b9;
+  margin: 5px 0;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
   }
-  
-  .about-header {
-    text-align: center;
-    margin-bottom: 40px;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .about-header h1 {
-    font-size: 2.5rem;
-    color: #be37a1;
-  }
-  
-  .about-header p {
-    font-size: 1.2rem;
-    color: #2980b9;
-  }
-  
-  .about-widgets {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
   .widget {
-    background: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    width: 45%; /* Adjust width based on layout */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .widget:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .widget h2 {
-    font-size: 1.8rem;
-    color: #be37a1;
-    margin-bottom: 15px;
-  }
-  
-  .widget p {
-    font-size: 1rem;
-    color: black;
-  }
-  
-  .about-history {
-    margin-bottom: 30px;
-  }
-  
-  .about-history h2 {
-    font-size: 1.8rem;
-    color: #be37a1;
-  }
-  
-  .about-history p {
-    font-size: 1rem;
-    color: black;
-  }
-  
-  .about-team {
-    margin-bottom: 30px;
-  }
-  
-  .about-team h2 {
-    font-size: 1.8rem;
-    color: #be37a1;
-    text-align: center;
-  }
-  
-  .team-members {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  
-  .team-member {
-    width: 30%;
-    text-align: center;
-  }
-  
-  .team-member img {
     width: 100%;
-    max-width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
   }
-  
-  .team-member h3 {
-    font-size: 1.2rem;
-    color: #2980b9;
-    margin-top: 10px;
+
+  .team-member {
+    width: 45%;
   }
-  
-  .team-member p {
-    font-size: 1rem;
-    color: #2980b9;
+
+  .modal-content {
+    padding: 20px;
   }
-  
-  @media (max-width: 768px) {
-    .widget {
-      width: 90%;
-    }
-    .team-member {
-      width: 45%;
-    }
-  }
-  
+}

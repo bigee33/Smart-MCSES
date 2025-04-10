@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import { QRCodeSVG } from "qrcode.react"; // Corrected import for QRCodeSVG
-import "./FeeStructure.css"; // Ensure this import matches the actual file name
+import { QRCodeSVG } from "qrcode.react";
+import "./FeeStructure.css";
 
 const FeeStructure = () => {
   const [showDownload, setShowDownload] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
   const [popupQRCode, setPopupQRCode] = useState("");
+  const [filterText, setFilterText] = useState("");
+  const [sortOption, setSortOption] = useState("default");
 
-  // Fee structure for each class
+  // Correct fee structure list
   const feeStructure = [
     {
       class: "Nursery",
@@ -17,7 +19,7 @@ const FeeStructure = () => {
         { category: "Tuition Fee", amount: "NPR 7,000/month" },
         { category: "Examination Fee", amount: "NPR 1,000/semester" },
         { category: "Sports & Activity Fee", amount: "NPR 2,000/year" },
-        { category: "Lab Fee", amount: "NPR 0" }, // No lab fee for Nursery
+        { category: "Lab Fee", amount: "NPR 0" },
         { category: "Library Fee", amount: "NPR 1,000/year" },
       ],
     },
@@ -75,6 +77,8 @@ const FeeStructure = () => {
         { category: "Lab Fee", amount: "NPR 1,500/semester" },
         { category: "Library Fee", amount: "NPR 2,000/year" },
       ],
+    },
+    {
       class: "Class 8 and 9",
       fees: [
         { category: "Admission Fee", amount: "NPR 6,500" },
@@ -87,45 +91,62 @@ const FeeStructure = () => {
     },
   ];
 
-  // Handle the download button click
+  // Filter + Sort logic
+  const filteredFeeStructure = feeStructure
+    .filter((item) =>
+      item.class.toLowerCase().includes(filterText.toLowerCase())
+    )
+    .sort((a, b) => {
+      if (sortOption === "alphabetical") {
+        return a.class.localeCompare(b.class);
+      } else if (sortOption === "tuition") {
+        const getTuition = (fees) =>
+          parseInt(
+            fees.find((f) => f.category === "Tuition Fee")?.amount.replace(/\D/g, "")
+          );
+        return getTuition(a.fees) - getTuition(b.fees);
+      }
+      return 0;
+    });
+
   const handleDownloadClick = () => {
     setShowDownload(true);
     setTimeout(() => setShowDownload(false), 3000);
   };
 
-  // Handle click on payment method to show QR Code
   const handlePaymentMethodClick = (method) => {
     setPopupMessage(`QR code for ${method}`);
     if (method === "Bank Deposit") {
-      setPopupQRCode("https://www.example.com/bank-deposit"); 
+      setPopupQRCode("https://www.example.com/bank-deposit");
     } else if (method === "Online Payment Portal") {
-      setPopupQRCode("https://www.example.com/online-payment"); 
+      setPopupQRCode("https://www.example.com/online-payment");
     } else if (method === "Cash Payment at the School Office") {
-      setPopupQRCode("https://www.example.com/cash-payment"); 
+      setPopupQRCode("https://www.example.com/cash-payment");
     }
     setShowPopup(true);
   };
 
-  // Close popup
-  const closePopup = () => {
-    setShowPopup(false);
-  };
+  const closePopup = () => setShowPopup(false);
 
   return (
     <div className="fee-structure-container">
       <h1 className="title">Fee Structure - 2025</h1>
 
-      <div className="intro-section">
-        <p>
-          Welcome to the fee structure page of our school. Below are the details
-          for the current academic year 2025. Please review the details
-          carefully. If you have any questions or concerns, feel free to contact
-          us.
-        </p>
+      <div className="controls">
+        <input
+          type="text"
+          placeholder="Filter by class name..."
+          value={filterText}
+          onChange={(e) => setFilterText(e.target.value)}
+        />
+        <select onChange={(e) => setSortOption(e.target.value)} value={sortOption}>
+          <option value="default">Sort By</option>
+          <option value="alphabetical">Alphabetical</option>
+          <option value="tuition">Tuition Fee (Ascending)</option>
+        </select>
       </div>
 
-      {/* Fee structure for each class */}
-      {feeStructure.map((classInfo, index) => (
+      {filteredFeeStructure.map((classInfo, index) => (
         <div key={index} className="class-fee-container">
           <h2>{classInfo.class}</h2>
           <table className="fee-table">
@@ -147,21 +168,17 @@ const FeeStructure = () => {
         </div>
       ))}
 
-      {/* Payment Methods Section */}
       <div className="payment-methods">
         <h2>Payment Methods</h2>
         <p>You can make payments through the following methods:</p>
         <ul>
-          <li onClick={() => handlePaymentMethodClick("Bank Deposit")}>
-            Bank Deposit
-          </li>
+          <li onClick={() => handlePaymentMethodClick("Bank Deposit")}>Bank Deposit</li>
           <li onClick={() => handlePaymentMethodClick("Online Payment Portal")}>
-            Online Payment Portal{" "}
+            Online Payment Portal
           </li>
         </ul>
       </div>
 
-      {/* Download Section */}
       <div className="download-section">
         <button onClick={handleDownloadClick} className="download-button">
           Download Full Fee Structure (PDF)
@@ -171,7 +188,6 @@ const FeeStructure = () => {
         )}
       </div>
 
-      {/* QR Code Pop-up */}
       {showPopup && (
         <div className="popup-overlay" onClick={closePopup}>
           <div className="popup" onClick={(e) => e.stopPropagation()}>

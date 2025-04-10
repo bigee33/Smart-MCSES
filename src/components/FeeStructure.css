@@ -2,196 +2,211 @@
 
 /* Container for the fee structure page */
 .fee-structure-container {
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .intro-section {
-    margin-bottom: 30px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-    text-align: center;
-  }
-  
-  .class-fee-container {
-    margin-bottom: 30px;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    color: #be37a1;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  .fee-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .fee-table th, .fee-table td {
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.intro-section {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+}
+
+.class-fee-container {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #be37a1;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.fee-table th,
+.fee-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.fee-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.fee-table td {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.payment-methods {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.payment-methods h2 {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.payment-methods p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.payment-methods ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.payment-methods ul li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  cursor: pointer;
+  color: #2980b9;
+  transition: color 0.3s ease;
+}
+
+.payment-methods ul li:hover {
+  color: #3498db;
+}
+
+.download-section {
+  text-align: center;
+}
+
+.download-button {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #3498db;
+}
+
+.download-message {
+  color: #2ecc71;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Pop-up Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.popup h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-button:hover {
+  color: #e74c3c;
+}
+
+/* QR Code Styling */
+.qr-code {
+  margin-top: 20px;
+}
+
+.qr-code svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fee-structure-container {
     padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
   }
-  
-  .fee-table th {
-    background-color: #f2f2f2;
-    color: #333;
-  }
-  
+
+  .fee-table th,
   .fee-table td {
-    font-size: 1.1rem;
-    color: #555;
+    font-size: 1rem;
+    padding: 8px;
   }
-  
-  .payment-methods {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-  }
-  
-  .payment-methods h2 {
-    font-size: 1.6rem;
-    color: #333;
-  }
-  
-  .payment-methods p {
-    font-size: 1.1rem;
-    color: #555;
-  }
-  
-  .payment-methods ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
+
   .payment-methods ul li {
-    font-size: 1.1rem;
-    margin: 10px 0;
-    cursor: pointer;
-    color: #2980b9;
-    transition: color 0.3s ease;
+    font-size: 1rem;
   }
-  
-  .payment-methods ul li:hover {
-    color: #3498db;
-  }
-  
-  .download-section {
-    text-align: center;
-  }
-  
+
   .download-button {
-    background-color: #2980b9;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
   }
-  
-  .download-button:hover {
-    background-color: #3498db;
-  }
-  
-  .download-message {
-    color: #2ecc71;
-    font-size: 1.1rem;
-    margin-top: 10px;
-  }
-  
-  /* Pop-up Overlay */
-  .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-  
+
   .popup {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
+    width: 90%;
   }
-  
-  .popup h3 {
-    font-size: 1.3rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .close-button {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #333;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
-  .close-button:hover {
-    color: #e74c3c;
-  }
-  
-  /* QR Code Styling */
-  .qr-code {
-    margin-top: 20px;
-  }
-  
-  .qr-code svg {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .fee-structure-container {
-      padding: 10px;
-    }
-  
-    .fee-table th, .fee-table td {
-      font-size: 1rem;
-      padding: 8px;
-    }
-  
-    .payment-methods ul li {
-      font-size: 1rem;
-    }
-  
-    .download-button {
-      font-size: 1rem;
-    }
-  
-    .popup {
-      width: 90%;
-    }
-  }
-  
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.controls input,
+.controls select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}

@@ -1,47 +1,58 @@
-/* Import a signature-like font from Google Fonts */
+/* Import custom Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 
-/* Home Page */
+/* General Home Page Layout */
 .home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f8f8f8; /* Light gray background for a clean, modern look */
+  background-color: #f9f9f9;
   font-family: Arial, sans-serif;
-  padding: 30px;
+  padding: 40px 20px;
   gap: 40px;
 }
 
-/* Slideshow Section */
+/* Slideshow */
 .slideshow-section {
-  width: 100%;
-  max-width: 1200px;
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  width: 100%;
+  max-width: 1000px;
   overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow {
+  width: 100%;
+  height: 400px;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 15px;
 }
 
 .arrow-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: transparent;
-  color: #333333; /* Darker text color */
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #333;
   border: none;
-  font-size: 30px;
-  padding: 12px;
+  font-size: 28px;
+  padding: 10px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 10;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+  transition: all 0.3s ease;
 }
 
 .arrow-btn:hover {
-  background-color: rgba(72, 72, 72, 0.2); /* Darker gray on hover */
-  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .arrow-left {
@@ -52,47 +63,33 @@
   right: 10px;
 }
 
-/* Founder Message Section */
+/* Founder Section */
 .founder-message-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(
-    135deg,
-    #6a4e97,
-    #7a9fdb
-  ); /* Soft purple to blue gradient */
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
+  background: linear-gradient(135deg, #6a4e97, #7a9fdb);
+  color: white;
   padding: 40px;
-  width: 100%;
+  border-radius: 15px;
   max-width: 1000px;
-  margin-top: 30px;
-  transition: transform 0.3s ease-in-out;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.founder-message-container:hover {
-  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .founder-photo {
-  flex: 0 0 220px;
-  height: 220px;
-  width: 220px;
+  flex: 0 0 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
-  margin-left: -60px;
   border: 5px solid white;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .founder-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 
 .founder-photo:hover .founder-image {
@@ -101,233 +98,167 @@
 
 .founder-message-content {
   flex: 1;
-  color: #ffffff;
   text-align: center;
 }
 
 .founder-message-content h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 15px;
   text-transform: uppercase;
 }
 
 .founder-message-content p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 30px;
-  font-family: "Open Sans", sans-serif;
+  margin-bottom: 20px;
 }
 
 .founder-name p {
-  text-align: center;
-  font-size: 40px;
-  color: #ffffff;
-  font-weight: bold;
-  margin-top: 10px;
-  font-family: "Dancing Script", cursive;
-  letter-spacing: 1px;
+  margin: 0;
 }
 
-/* Notice Section */
-.notice-container {
-  background: linear-gradient(135deg, #6a4e97, #7a9fdb);
-  padding: 35px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  max-width: 800px;
-  width: 100%;
-  margin-top: 30px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.notice-container:hover {
-  transform: scale(1.05);
-}
-
-.notice-container h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.notice-container ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.notice-container li {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 18px;
-  font-family: "Open Sans", sans-serif;
-  color: #2980b9;
-  padding: 12px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.notice-container li:hover {
-  background-color: #f1f1f1;
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-.notice-footer {
-  text-align: center;
-  margin-top: 20px;
+.founder-title {
   font-size: 16px;
-  color: #e0e0e0;
+  font-weight: 500;
+  opacity: 0.8;
 }
 
-/* Upcoming Events Section */
+.founder-name-text {
+  font-size: 36px;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Notice & Event Cards */
+.notice-container,
 .upcoming-events-container {
   background: linear-gradient(135deg, #6a4e97, #7a9fdb);
-  padding: 35px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 30px;
   border-radius: 15px;
-  max-width: 800px;
-  width: 100%;
-  margin-top: 30px;
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 400px;
 }
 
-.upcoming-events-container:hover {
-  transform: scale(1.05);
-}
-
+.notice-container h2,
 .upcoming-events-container h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 26px;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
+.notice-container ul,
 .upcoming-events-container ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
 }
 
+.notice-container li,
 .upcoming-events-container li {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 18px;
-  font-family: "Open Sans", sans-serif;
-  color: #2980b9;
+  background-color: white;
+  color: #333;
   padding: 12px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
+.notice-container li:hover,
 .upcoming-events-container li:hover {
-  background-color: #f1f1f1;
-  transform: scale(1.05);
+  transform: scale(1.03);
+  background-color: #f0f0f0;
   cursor: pointer;
 }
 
-/* Founder and Notice Section Layout */
-.founder-notice-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 40px;
-}
-
-/* Founder and Upcoming Events Section Layout */
-.notice-events-section {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.notice-section,
-.upcoming-events-section {
-  flex: 1;
-  max-width: 48%;
-}
-
-/* Container for statistics */
+/* Statistics */
 .statistics-container {
   background: linear-gradient(to right, #be37a1, #2980b9);
+  color: white;
   padding: 40px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  width: 100%;
-  max-width: 1000px;
-  margin-top: 30px;
   text-align: center;
+  max-width: 1000px;
+  width: 100%;
 }
 
 .statistics-container h2 {
-  font-family: "Montserrat", sans-serif;
   font-size: 30px;
-  font-weight: bold;
   margin-bottom: 30px;
   text-transform: uppercase;
-  color: #ffffff;
 }
 
-/* Flex container to ensure all cards are in one row */
 .statistics-cards {
   display: flex;
-  justify-content: space-between; /* Distribute cards evenly */
-  gap: 30px; /* Space between the cards */
-  align-items: center;
-  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-/* Styling for each stat card */
 .stat-card {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #ffffff;
-  padding: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 25px;
   border-radius: 15px;
-  text-align: center;
   flex: 1;
+  min-width: 250px;
+  text-align: center;
 }
 
 .stat-card h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 15px;
+  font-size: 22px;
+  margin-top: 10px;
 }
 
 .stat-card p {
-  font-size: 40px;
-  font-family: "Open Sans", sans-serif;
-  margin: 15px 0;
-  line-height: 1.2;
+  font-size: 36px;
+  margin: 10px 0;
 }
 
-.stat-card svg {
-  margin-bottom: 15px; /* Space between icon and text */
+/* Layout */
+.founder-notice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
 }
 
-/* Responsive design for smaller screens */
+.notice-events-section {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .slideshow {
+    height: 250px;
+  }
+
+  .founder-message-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .statistics-cards {
     flex-direction: column;
-    gap: 30px;
   }
 
   .stat-card {
-    width: 100%; /* Make the cards take full width on small screens */
-    padding: 20px;
+    width: 100%;
   }
 
-  .stat-card h3 {
-    font-size: 22px;
+  .notice-events-section {
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .stat-card p {
-    font-size: 35px;
+  .notice-container,
+  .upcoming-events-container {
+    max-width: 100%;
   }
 }

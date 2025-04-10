@@ -31,22 +31,20 @@ body {
 .top-bar {
   color: #fff;
   display: flex;
-  justify-content: center;  
-  align-items: center;     
-  padding: 10px 0;          
-  background-color: #004085;  
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #004085;
 }
 
 .contact-info {
   display: flex;
   gap: 20px;
   color: white;
-  justify-content: center; 
-  align-items: center;     
-  text-align: center;      
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
-
 
 .contact-info span {
   display: flex;

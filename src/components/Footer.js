@@ -1,5 +1,5 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -15,13 +15,22 @@ const Footer = () => {
           {/* Quick Contact Section */}
           <div className="quick-contact">
             <h3>Quick Contact</h3>
-            <p><i className="fas fa-map-marker-alt"></i> Melamchi-11, Sindhupalchowk</p>
-            <p><i className="fas fa-phone"></i> 011-401105, 9800000000</p>
             <p>
-              <i className="fas fa-envelope"></i>{' '}
-              <a href="mailto:inquiry@texascollege.edu.np">inquiry@smartmcses.edu.np</a>
+              <i className="fas fa-map-marker-alt"></i> Melamchi-11,
+              Sindhupalchowk
             </p>
-            <p><i className="fas fa-clock"></i> Opening Hours: 9:00 AM - 4:00 PM</p>
+            <p>
+              <i className="fas fa-phone"></i> 011-401105, 9800000000
+            </p>
+            <p>
+              <i className="fas fa-envelope"></i>{" "}
+              <a href="mailto:inquiry@texascollege.edu.np">
+                inquiry@smartmcses.edu.np
+              </a>
+            </p>
+            <p>
+              <i className="fas fa-clock"></i> Opening Hours: 9:00 AM - 4:00 PM
+            </p>
           </div>
 
           {/* Social Media Section */}
@@ -53,8 +62,9 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <div className="copyright">
-          <p className="copyright-text">Copyright © 2024 All Rights Reserved.</p>
-          <p className="developed-by">Developed By: BCA 7th Sem</p>
+          <p className="developed-by">
+            Developed By: Information Bridge Technologies Nepal Pvt.Ltd
+          </p>
         </div>
       </footer>
     </>

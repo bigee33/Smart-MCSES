@@ -12,7 +12,7 @@ const Header = () => {
       <div className="top-bar">
         <div className="contact-info">
           <span>
-            <FaPhoneAlt className="icon" /> 011-401105
+            <FaPhoneAlt className="icon" /> 011-000000
           </span>
           <span>
             <FaWhatsapp className="icon whatsapp-icon" /> 980000000000
